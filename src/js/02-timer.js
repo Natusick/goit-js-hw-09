@@ -21,10 +21,9 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    selectedDate = selectedDates[0]; 
+    selectedDate = selectedDates[0];
 
     if (selectedDates[0] < Date.now()) {
-      
       Notify.failure('Please choose a date in the future', {
         width: '300px',
         position: 'right-top',
@@ -35,9 +34,7 @@ const options = {
         },
       });
       refs.startEl.disabled = true;
-    }
-   else
-    {
+    } else {
       refs.startEl.disabled = false;
     }
   },
@@ -48,14 +45,14 @@ const start = function () {
   let deltaTime = 0;
   refs.startEl.disabled = false;
 
-  intervalId = setInterval(() => {  
+  intervalId = setInterval(() => {
     const currentTime = Date.now();
     const deltaTime = selectedDate - currentTime;
 
     if (deltaTime <= 0) {
       clearInterval(intervalId);
       refs.startEl.disabled = true;
-      return 
+      return;
     }
 
     let dateObj = convertMs(deltaTime);

@@ -16,12 +16,12 @@ img {
   display: block;
   max-width: 100%;
 }
-.value{
+.value {
   font-size: 28px;
   font-weight: 500;
   align-items: center;
 }
-.label{
+.label {
   font-size: 14px;
   align-items: center;
 }
@@ -51,7 +51,6 @@ img {
 
 .field-table {
   display: flex;
- 
 }
 .field {
   display: flex;
@@ -62,4 +61,24 @@ img {
   width: 58px;
   margin-top: 20px;
   margin-right: 10px;
+}
+
+.form {
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.label-promis {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 10px;
+}
+
+.input {
+  margin-top: auto;
+  height: 30px;
+  justify-content: center;
 }
